@@ -1,0 +1,1177 @@
+\documentclass[twoside]{report}
+
+% ------
+% Umlaute
+\usepackage{ifluatex,ifxetex}
+\ifluatex
+  \usepackage{fontspec}
+\else
+  \ifxetex
+    \usepackage{fontspec}
+  \else
+    \usepackage{selinput}
+    \SelectInputMappings{
+      adieresis={ä},
+      germandbls={ß},
+    }
+    \usepackage[T1]{fontenc}
+    %\usepackage{textcomp}% optional
+    %\usepackage{lmodern}
+  \fi
+\fi
+
+% ------
+% Paper auf Deutsch
+\usepackage[ngerman]{babel}
+
+
+
+% ------
+% Page layout
+\usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt]{geometry}
+\usepackage[font=it]{caption}
+\usepackage{paralist}
+%\usepackage{multicol}
+\usepackage{tabularx,ragged2e}
+\newcolumntype{C}{>{\Centering\arraybackslash}X} % centered "X" column
+
+% ------
+% Abstract
+\usepackage{abstract}
+	\renewcommand{\abstractnamefont}{\normalfont\bfseries}
+	\renewcommand{\abstracttextfont}{\normalfont\small\itshape}
+
+
+% ------
+% Titling (section/subsection)
+\usepackage{titlesec}
+\renewcommand\thesection{\Roman{section}}
+\titleformat{\section}[block]{\Large\scshape\bfseries}{\thesection.}{1em}{}
+\setcounter{secnumdepth}{3}
+
+% ------
+% Tabellen über Seitenumbrüche hinweg
+\usepackage{longtable}
+
+% ------
+% Header/footer
+\usepackage{fancyhdr}
+	\pagestyle{fancy}
+	\fancyhead{}
+	\fancyfoot{}
+	\fancyhead[C]{Projektdokumentation $\bullet$ PROJEKTNAME $\bullet$ SS17$+$WS17/18}
+	\fancyfoot[RO,LE]{}
+
+
+% ------
+% Clickable URLs (optional)
+% \usepackage{hyperref}
+
+% ------
+% Literaturverweise mit Bibtex einbinden
+\usepackage[authoryear,sectionbib,round]{natbib}
+
+% ------
+% Bilder laden
+\usepackage[pdftex]{graphicx}
+
+% ------
+%Quellcodeangabe
+\usepackage{listings}
+
+% ------
+% Maketitle metadata
+\title{\vspace{-5mm}%
+	\fontsize{24pt}{10pt}\selectfont
+	\textbf{Projektdokumentation}
+	}	
+\author{%
+        % alle Autoren hier listen
+        % 
+	\large
+	\textsc{Autor I -- E-Mail} \\[2mm]
+	\textsc{Autor II -- E-Mail} \\[2mm]
+	\normalsize	HTWK Leipzig 
+	}
+\date{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+
+
+% -------
+% Titel und Abstract über beide Spalten
+%\twocolumn[
+%\begin{@twocolumnfalse}
+
+\maketitle
+\thispagestyle{fancy}
+
+\tableofcontents
+
+%%%%
+%%%% Die Struktur des Dokuments bitte nicht aendern!!!
+%%%%
+
+\section{Anforderungsspezifikation}
+
+\subsection{Initiale Kundenvorgaben}
+{\small Autor: xxx}
+
+Maecenas sed ultricies felis. Sed imperdiet dictum arcu a egestas. 
+In sapien ante, ultricies quis pellentesque ut, fringilla id sem. Proin justo libero, dapibus consequat auctor at, euismod et erat. Sed ut ipsum erat, iaculis vehicula lorem. Cras non dolor id libero blandit ornare. Pellentesque luctus fermentum eros ut posuere. Suspendisse rutrum suscipit massa sit amet molestie. Donec suscipit lacinia diam, eu posuere libero rutrum sed. Nam blandit lorem sit amet dolor vestibulum in lacinia purus varius. Ut tortor massa, rhoncus ut auctor eget, vestibulum ut justo.
+
+
+\subsection{Produktvision}
+{\small Autor: xxx}
+
+
+Quisque vel arcu eget sapien euismod tristique rhoncus eu mauris. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras ligula lacus, dictum id scelerisque nec, venenatis vitae magna. Cras tristique porta elit, non tincidunt ligula placerat lobortis. Pellentesque quam enim, mattis in cursus eu, blandit et massa. Mauris aliquet turpis blandit elit vehicula sed posuere lectus facilisis. Donec blandit adipiscing tortor, quis lobortis purus eleifend vel. Nam a tellus at magna scelerisque blandit vel nec erat.
+
+
+% Das hier ist ein Absatz, der die Grafik in Abbildung~\ref{fig:bild1} detailliert erläutert, erklärt und interpretiert.
+
+% \begin{figure}[b]
+%   \centering
+%   \includegraphics[width=4.5cm]{bspbild1.png}
+%   \caption{Beispiel für ein einspaltiges Bild}
+%   \label{fig:bild1}
+% \end{figure}
+
+
+\subsection{Liste der funktionalen Anforderungen}
+
+XXX
+
+%
+% soll der Inhalt dieser Subsection in einer separaten Datei
+% (z.B. listefunktional.tex) liegen, dann kann dies mit dem
+% folgenden Kommando geschehen.
+%
+% \input{listefunktional}
+
+\subsection{Liste der nicht-funktionalen Anforderungen}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Weitere Zuarbeiten zum Produktvisions-Workshop}
+
+\subsubsection{Zuarbeit von Mathias Telling}
+\begin{document}
+	\tableofcontents
+	\subsubsection{Zuarbeit zur Technologierecherche von Mathias Telling}	
+	\section{Was ist das?}\index{Was ist das?}
+	\begin{itemize}
+		\item React ist eine Softwarelösung auf Basis von JavaScript.
+		\item Ursprünglich bei Facebook entwickelt, für eine effizientere Entwicklung von JS Anwendungen
+		\item React ist kein Framework wie allgemein angenommen, sondern eine User Interface Bibliothek.
+		\item wurde entwickelt als Werkzeug um Benutzeroberflächen in JavaScript zu erstellen.
+		\item wird typischerweise für die Entwicklung von Single-Web-Page-Webanwendungen verwendet.
+		\item React erfreut sich immer größerer Beliebtheit, vor allem bei großen Namenhaften Unternehmen wie z.B. Google. 
+	\end{itemize}
+	Es wird typischerweise als Basis für die Erstellung von Single-Page-Webanwendungen verwendet. Es besteht ebenfalls die Möglichkeit, für eine Serverseitige Anwendung unter Verwendung von Node.js. Es hat auch eine modulare Komponentenarchitektur zu bieten. Diese dient vor allem den dann leicht nachzuvollziehenden Frontendcode.  
+	\newline
+	React wurde anfänglich von Facebook entwickelt und 2013 der Community als OpenSpource Projekt öffentlich gemacht. Seither wird die Software von großen Namhaften Softwareunternehmen genutzt.
+	\newline
+	\newpage
+	\section{Wie genau wird das genutzt?}\index{Wie genau wird das gentutz?}
+	Für die Nutzung stehen zwei Möglichkeiten zur Verfügung:
+	\newline
+	\begin{enumerate}
+		\item \texttt{lokale Entwicklungsumgebung}
+		Installation unter Windows
+		\newline  
+		\item Wenn Node.js und npm noch nicht installiert sind, muss das als erstes gemacht werden.
+		\item Node.js ist eine JavaScript runtime und npm ein node package manager, wird gebraucht um Bibliotheken wie React.js zu installieren.
+		\item um beide Anwendungen installieren zu können, sollten die vorher heruntergeladen werden.
+		Node.js unter https://nodejs.org/de/download/
+		Installation unter Linux
+		\newline
+		\item die Installation von Node.js ist unter Ubuntu recht einfach
+		\item um Node.js zu installieren, in den Terminal gehen
+		\item sudo apt-get install nodejs in die Kommandozeile eingeben und es wird installiert
+		\newpage
+		Anwenden von React
+		\begin{itemize}
+			\item 1. Schritt: React importieren
+			\begin{lstlisting}
+			<script src="https://unpkg.com/react@16.4.1/umd/react.production.min.js\">
+			</script>
+			<script src="https://unpkg.com/react-dom@16.4.1/umd/react-dom.production.min.js\">
+			</script>	 
+			\end{lstlisting}
+			\item  2. Schritt: DOM.render importieren
+			\begin{lstlisting}
+			import ReactDOM from 'react-dom'
+			\end{lstlisting}
+			\item 3. Schritt: ReactDom implementieren
+			\begin{lstlisting}
+			ReactDOM.render(
+			element,
+			document.getElementById('root')
+			);
+			\end{lstlisting}
+			\item 4. Schritt: erstellen der Render Komponente als class
+			\begin{lstlisting}
+			class Board extends React.Component { 
+			renderSquare(i) { 
+			return <Square value={i} />; 
+			} 
+			} 
+			\end{lstlisting}
+			\item hier ist CountryList eine React Komponentenklasse als div
+			\begin{lstlisting}
+			return React.createElement('div', {className: 'country-list'}
+			React.createElement('h1', /* ... h1 children ... */)
+			React.createElement('ul', /* ... ul children ... */)
+			);
+			\end{lstlisting}
+		\end{itemize}
+		\item \texttt{Browser}
+		Über den Link \url{https://codepen.io/gaearon/pen/oWWQNa?editors=0010} öffnet sich ein Fenster und hier kann der Code via Web bearbeitet werden.
+	\end{enumerate}
+\end{document}
+
+\subsubsection{Zuarbeit von Hanna Markava}
+\underline{\textbf{Ausblick}} \\ \\
+\begin{tabular}{l c}
+\textit{Zum Ausblick:}  \\
+\hline
+-Stelle mit GPS ausstatten \\
+\hline
+-Barrierefreiheit gewährleisten \\
+\hline
+-Kamera für Gesichtserkennung \\
+\hline
+-Sprachausgabe ( automatisches Vorlesen) \\
+\hline
+-Opal/E-mail Login \\
+\hline
+-Videoverzeichnisse/Online Vorlesung \\
+\hline
+-Kalender/Stundenplan \\
+\hline
+-Studentische Kartenaufladung \\
+\hline
+-Bluetooth-Informationsübertragung(Infos zum Mitnehmen) \\
+\hline
+-Spiele zum Spaß \\
+\hline
+\end{tabular}
+\begin{center}
+***
+\end{center}
+\newpage
+\underline{\textbf{Konkurrenzprodukte}} \\ \\
+\begin{table}[!ht]
+\setlength\extrarowheight{2pt} % for a bit of visual "breathing space"
+\begin{tabularx}{\textwidth}{|C|C|C|}
+%\begin{tabular}{|c|c|c|}
+\multicolumn{1}{C}{\textbf{Deutsche Bahn/LVB-Terminals}} & \multicolumn{1}{C}{\textbf{McDonald`s-Terminal}} & \multicolumn{1}{C}{\textbf{Höfe am Brühl-Terminale}} \\ 
+\hline 
+Zielgruppe:alle & Zielgruppe:alle & Zielgruppe : alle \\
+\hline
+Ziel:Ticketkauf & Ziel:eine Bestellung tätigen & Ziel: Geschäfteauskunft, Navigation, aktuelle Angebote und Neuigkeiten \\
+\hline 
+-Suche/Hilfe/Auswahl der Sprache auf der Startseite** & -einfache Menüstruktur,strukturiert,schnell und übersichtlich** & -Niedrige Ladezeiten der Präsentation \\ 
+\hline 
+-Zeit/Datum** & -simples Design & "Bitte berühren Sie zum Navigieren" (Sparmodus + geringere Helligkeit + wenig Akku)** \\ 
+\hline 
+-Funktion: Abbrechen/Zurückgehen & -Spracheauswahl an der Startseite & ' Sind Sie noch da?'(Neuer Benutzer in 5 Sekunden -> bleibt auf der Seite)** \\ 
+\hline 
+-Niedrige Ladezeit & -gute Implementierung von UI/UX & -Funktion in der Navigation -> Zurückstellen und Suche über die Tastatur  \\ 
+\hline 
+-Anruf zum Notfall & -große Bilder(hohe Auflösung) & -gute Implementierung von UI/UX ( aber kein Zoomen) \\ 
+\hline 
+ &  & -einfache Menüstruktur, strukturiert, schnell und übersichtlich \\ 
+\hline 
+ &  & -Anzeige, wie viele Minuten werden gebraucht um das Ziel zu errreichen** \\ 
+\hline 
+ &  & -Barrierefrei -> Tastatur nach unten** \\ 
+\hline 
+ &  & -Laufende News auf dem dunkleren Hintergrund** \\ 
+\hline 
+ &  & -Touch-Screen Feedback** \\ 
+\hline 
+\multicolumn{3}{|c|}{** - vorteilhafte Ideen} \\ 
+\hline 
+\end{tabularx}
+\caption{Konkurrenzprodukte}
+\end{table}
+%\end{tabular}
+
+\subsubsection{Zuarbeit von Robert Seidel}
+Zielgruppe und Bedürfnisse:
+\begin{itemize}
+	\item Wer benutzt die Stele:
+		\begin{itemize}
+		\item Studenten der HTWK (hauptsächlich Studenten der Fakultät Bau)
+		\item Mitarbeiter der HTWK
+		\item Externe Besucher
+		
+		\end{itemize}
+	\item Was für eine Absicht:
+		\begin{itemize}
+		\item Tagesaktuelle Informationen der HTWK (News, Veranstaltungen, Termine)
+		\item Lageplan
+		\item Informationen über studentische Informationen (z.B. Login mit Matrikelnummer +
+		PW)
+		\item Hochschulsportangebot
+		\item Mensaplan
+		\item Videoübertragung von Vorlesungen
+		\item Zahlen und Fakten der HTWK
+		\item Studiengänge
+		\item Forschungsthemen
+		\item Internationales
+		\item Online Bib.
+		\end{itemize}
+	\item Kernfunktionen:
+		\begin{itemize}
+		\item Das Produkt soll Informationen und Inhalte, die dynamisch im Internet
+		vorhanden sind (z.B. News der HTWK oder der Stundenplan für die Fakultät
+		Bau) auslesen und in ansprechender Form anzeigen können
+		\item intuitiv bedienbar
+		
+		\end{itemize}
+	\item Support
+		\begin{itemize}
+			\item Das Supporticon soll an fester Stelle positioniert sein und bei Benutzung die aktuelle Seite
+			erklären und beschreiben (z.B. Pop up)
+			\item Keine Erklärung für Steuerung, diese sollte innovativ sein.. außer es gibt Möglichkeit mit 2
+			Fingern zu steuern
+			\item Installation sollte per USB Stick erfolgen und durch ein Setup geführt werden ob
+			wiederhergestellt oder neu installiert werden soll
+			\item Auf die Software, sollte nur ein Administrator mithilfe eines USB Stick zugreifen können...
+		\end{itemize}
+\end{itemize}
+
+
+\subsubsection{Zuarbeit von Autor Nimrod Mugzach}
+\begin{itemize}
+\item Zielgruppe:
+    \begin{itemize}
+        \item jede Nutzer der Gerät z.B.: Studenten, Mitarbeiter, Studieninteressierte und Besucher.
+    \end{itemize}
+\item Beduürfnisse:
+    \begin{itemize}
+        \item Einfache und interaktive Bedienung
+        \item Überschaubarkeit
+        \item Anpassungsfähigkeit bzw. Farben, Logo und Icons
+        \item Multiple Sprachen 
+        \item Aktuelle HTWK-Logo
+        \item Touch optimiert
+    \end{itemize}
+\item Produkt:
+    \begin{itemize}
+        \item Jede Element soll groß genug sein 
+        \item Gleiche und ständige Benutzererfahrung  
+        \item Navigation zwischen Unterseiten
+        \item Zoomen
+        \item Medieninhalt zeigen und spielen
+    \end{itemize}
+\item Mitbewerber:
+    \begin{itemize}
+        \item Verschiedene Firmen die solche Kiosksysteme nutzen 
+              um Kunden über ihre Produkt zu informieren oder allgemeine Information darzustellen
+        \item Beispiel: Easyjets Self-Service Kiosksystem an den Flughäfen 
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Zuarbeit von Marc Zenker}
+Produktvision zu den Punkten: Kernfunktionalität und Support
+
+\begin{itemize}
+	\item Kernfunktionalität
+    		\begin{itemize}
+	        		\item Zielgruppe:
+				\begin{itemize}
+					\item Studenten
+					\item Dozenten 
+					\item Besucher
+				\end{itemize}
+			\item Bedürfnisse:
+				\begin{itemize}
+					\item maximaler Informationsgewinn in minimaler Zeit (Termine, Lageplan)
+					\item Terminveränderungen (Ausfälle oder Verschiebungen) direkt anzeigen lassen
+					\item Übersichtlichkeit wahren
+					\item intuitive Handhabung
+					\item niedrige Ladezeiten
+				\end{itemize}
+			\item Produkt:
+			\begin{itemize}
+			\item statische Inhalte
+				\begin{itemize}
+					\item besonders herausragende Abschlussarbeiten
+					\item Informationen zur HTWK, zu Studiengängen der FB 
+					\item Spiele (Tetris, Quiz)
+				\end{itemize}
+			\item dynamische Inhalte
+				\begin{itemize}
+					\item Stundenplanfür Fakultät Bau (Vorauswahl für FB treffen)
+					\item Termine (Verteidigung)
+					\item Neuigkeiten
+					\item Lageplan(2D, evtl. 3D)
+					\item Übertragung der Vorlesung
+					\item Präsentationen
+				\end{itemize}		
+			\end{itemize}		
+    		\end{itemize}
+
+	\item Support
+		\begin{itemize}
+			\item Zielgruppe:
+				\begin{itemize}
+					\item Wartungsdienst vs.
+					\item Besucher
+				\end{itemize}
+			\item Bedürfnisse:
+				\begin{itemize}
+					\item Wartungsdienst
+						\begin{itemize}						
+							\item minimalster bis kein Wartungsaufwand (keine Mitarbeiter vorhanden)
+						\end{itemize}
+					\item Besucher
+						\begin{itemize}						
+							\item aufgrund einfacher und intuitiver Gestaltung, sollte es keine Support-Bedürfnisse für die meisten Anwender vor der Stele geben
+						\end{itemize}
+				\end{itemize}
+			\item Produkt
+				\begin{itemize}						
+					\item Wartungsdienst
+						\begin{itemize}						
+							\item einfache Installation, inkl. Handbuch
+							\item Wiederherstellungsmöglichkeit
+							\item Zugang zu Wartungsarbeiten nur für autorisiertes Personal
+						\end{itemize}
+					\item Besucher
+						\begin{itemize}						
+							\item technische Informationen über die Stele
+							\item Zweck der Stele
+						\end{itemize}
+				\end{itemize}				
+    		\end{itemize}
+ \end{itemize}
+
+\subsubsection{Zuarbeit von Max Vierling}
+
+\begin{itemize}
+	\item Kernfunktionalitäten:
+	\begin{itemize}
+		\item statisch:
+		\begin{itemize}
+			\item Abschlussarbeiten
+			\item verschiedene Informationen zur HTWK und Fakultät $\rightarrow$ Veranstaltungen
+		\end{itemize}
+		\item dynamisch:
+		\begin{itemize}
+			\item abrufbarer Stundenplan $\rightarrow$ Studenten
+			\item Anzeigen wichtiger Termine $\rightarrow$ Studenten
+			\item HTWK- ,,Newsfeed`` $\rightarrow$ Veranstaltungen + Studenten
+			\item Lageplan mit ,,Beschriftungsmöglichkeit`` $\rightarrow$ Veranstaltungen
+			\item Anzeigen von Videos, Bildern und Präsentationen $\rightarrow$ Professoren
+		\end{itemize}
+	\end{itemize}
+	\item Konkurrenzprodukte:
+	\begin{itemize}
+		\item Konkurrenz: ARNO (Kunden wie COCA COLA, Dailmler, Chupa Chups oder Gucci)
+		\item Verwendung: Werbung, Information(Lagepläne oder Produktinformationen), Bestellen/Bezahlen
+		\item oft relativ einseitige Benutzung(wenige Funktionen)
+	\end{itemize}
+	
+	\item Differenzierungsmerkmale:
+	\begin{itemize}
+		\item Verbindung mehrerer Aspekte und Funktionalitäten
+	\end{itemize}
+\end{itemize}
+
+\subsubsection{Zuarbeit von Judith Gwen Schulz}
+Zielgruppe und Bedürfnisse:
+\begin{itemize}
+	\item generelles Bedürfnis:
+		\begin{itemize}
+		\item einfache Handhabung
+		\end{itemize}
+	\item Mitarbeiter der Hochschule:
+		\begin{itemize}
+		\item Einfügen und Bearbeitung von Inhalten
+		\item Fernzugriff zu der Stele über Netzwerk der Hochschule
+		\item Durchführung von Präsentationen
+		\end{itemize}
+	\item Studenten der Hochschule:
+		\begin{itemize}
+		\item Präsentationsmöglichkeiten
+		\item Informationsauskunft:
+		    \begin{itemize}
+		    \item Stundenplan
+		    \item aktuelle Termine (Lehrveranstaltungen, Projekte, Vorträge etc.)
+	         \item News
+	    	\end{itemize}
+		\end{itemize}
+	\item Besucher der Hochschule
+		\begin{itemize}
+			\item Besucher der Hochschule:
+		        \begin{itemize}
+		        \item Lageplan
+		        \item aktuelle Termine (Präsentationen/Vorträge, die an diesem Tag stattfinden
+	        	\end{itemize}
+			\item Informationsquelle:
+		    	\begin{itemize}
+		        \item Informationen über: Studiengänge, die Lehrenden, aktuelle Projekte der Hochschule
+	        	\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	Kernfunktion:
+	\begin{itemize}
+	\item Möglichkeit schnell und unkompliziert Präsentationen zu laden und abzuspielen
+	\item Darstellung des Webseiten Content der Hochschule
+	 \item Darstellung von: Lageplan, Stundenplänen, Terminen, News, Videos und Abschlussarbeiten     
+	\end{itemize}
+	Ausblick:
+	\begin{itemize}
+	\item Ausstattung der Stele mit GPS
+	\item Sprachausgabe: Vorlesen der Texte
+	\item interaktiver 3D Lageplan
+	\item Gesichtserkennung
+	\item Spracherkennung
+	\end{itemize}
+
+\subsection{Liste der Kundengespräche mit Ergebnissen}
+{\small Autor: xxx}
+
+XXX
+
+
+
+\section{Architektur und Entwurf}
+
+\subsection{Zuarbeiten der Teammitglieder}
+
+\subsubsection{Statische Inhalte}
+\subsubsection{Zuarbeit von Marc Zenker}
+\begin{itemize}
+\item Übertragung der stat. Inhalte:
+    \begin{itemize}
+        \item bisher über USB\\\\
+        \begin{tabular}[h]{l|l}
+            \textbf{Vorteile} & \textbf{Nachteile} \\
+            \hline
+            einfacher Betrieb &  USB-Medium muss mitgeführt werden\\
+            \hline
+            sichere Übertragung & Schlüssel muss mitgeführt werden \\
+            \hline
+            Zugang physisch einschränkbar &  \\
+        \end{tabular}\\
+        \item Alternative: Netzwerk
+    \end{itemize}
+\item Vorteile statischer Inhalte:
+    \begin{itemize}
+        \item hohe Performance 
+        \item volle Kontrolle über den Quellcode 
+        \item hohe Sicherheit
+        \item geringer Wartungsaufwand 
+        \item hohe Übersichtlichkeit
+        \item Inhalte gut lesbar
+    \end{itemize}
+\item Nachteile statischer Inhalte:
+    \begin{itemize}
+        \item Ersterstellung zeitintensiv
+        \item Änderungen vom Kunden nicht durchführbar
+    \end{itemize}
+\item Was wird bereits genutzt?
+    \begin{itemize}
+        \item Markdown in Verbindung mit CSS, HTML und Javascript 
+        \item Alternativen?
+        \begin{itemize}
+       	\item reStructuredText
+	    \item Org-mode
+	    \item Asciidoctor
+        \end{itemize}
+        \item Lohnt der Wechsel?	Nein.
+    \end{itemize}
+\item Markdown:
+    \begin{itemize}
+        \item vereinfachte Auszeichnugssprache
+        \item Vorteile:
+	\begin{itemize}
+	\item Einfache Syntax für Formatierung
+	\item Schnell erzeugtes HTML
+	\item Flexible Ausgabeformate
+	\item Portable Cross-Plattform Dokumente
+	\end{itemize}
+        \item Beispiel von Markdown zu HTML\\\\
+        \begin{tabular}[h]{l|l}
+            \textbf{Markdown} & \#\# Markdown\\
+                              & **Text fett geschrieben**\\
+                              & *Text kursiv angezeigt* \\
+            \hline
+            \textbf{HTML} & \lstinline!<h2>Markdown</h2>! \\
+                          & \lstinline!<p><strong>Text fett geschrieben</strong></p>!\\
+	                      & \lstinline!<p><em>Text kursiv angezeigt</em></p>!\\ 
+        \end{tabular}\\
+        \item Editoren: StackEdit, Typora
+        \item Anzeige: React zur Entwicklung des Frontend
+        \item Verarbeitung: Umsetzung mit NodeJS
+        \item benutzte Bibliotheken:  react, react-select, react-dom, react-markdown
+    \end{itemize}
+\item Ändern statischer Inhalte
+	\begin{itemize}
+	\item ,,Normaler Modus``  starten
+	\item in den Ordner ,,client\_webpage\textbackslash public\textbackslash content\textbackslash`` wechseln
+	\item nach Titel durchsuchen
+	\item für die Darstellung Bilder und Markdown-Dateien ändern
+          \item Zugriff über eine Remotedesktopverbindung möglich
+	\end{itemize}
+\item Mehrsprachigkeit
+	\begin{itemize}
+	\item noch nicht implementiert
+	\item Vorschlag: mittels Markdown
+	\end{itemize}
+\end{itemize}
+
+XXX
+
+\subsubsection {Zuarbeit zur Technologierecherche von Robert Seidel}
+
+\paragraph{\underline{Windows auf der Stele}}
+
+\begin{itemize}
+	\item Die Stele hat zwei Betriebs-Modi: Kiosk-Modus (die bisherige Betriebsart) und neu den Erweiterte-Modus 
+	\item Einem IT-Mitarbeiter ist es möglich den Wechsel von/in Erweiterte-Modus z.B. über Skript-/Registry-Dateien zu aktivieren/deaktivieren. Dazu gibt es Desktop-Verknüpfungen („Kiosk-Modus AN“, „Kiosk-Modus AUS“)
+	\item es gibt 2 lokale Windows Benutzer 
+	\item Ist der Kiosk-Modus aktiv, funktioniert die automatische Anmeldung und der Hephaistos Start direkt
+	\item Im erweiterten Modus bleibt Windows, beim Boot im normalen Benutzer Login stehen 
+	
+\end{itemize}
+
+\paragraph{\underline{Erweiterter Modus}}
+\paragraph{Allgemeines und Nutzung}
+\begin{itemize}
+	\item beim Auswählen des Benutzers, startet der Hephaistos Server im Hintergrund
+	\item Auf dem Desktop gibt es eine Verknüpfung zum öffnen der Hephaistos Software über den Edge Browser, diese erscheint im Fullscreen (ohne URL Bar usw.)
+	\item Öffnet der Benutzer Edge normal, dann hat er die URL-Bar etc. zum normalen Browsen. Hephaistos ist hier als Startseite angelegt. Edge kann hierbei uneingeschränkt genutzt werden (alternativ kann dem Benutzer auch ein anderer Browser (Firefox) angeboten werden)
+	\item Andere Programme wie Powerpoint lassen sich ebenfalls starten
+\end{itemize}
+\paragraph{Aktuelles Problem}
+
+
+	Nach einem Neustart ist der lokale Webserver teils noch nicht gestartet, wenn Edge die App laden will (404).
+
+\paragraph{\underline{Kioskmodus}}
+\paragraph{Allgemeines und Nutzung}
+\begin{itemize}
+	\item Was ist der Kioskmodus?
+	\item Ziel: Als Student kann der Kiosk-Modus des Hauptprogramms nicht verlassen werden, um so nicht in das Betriebssystem eingreifen zu können  
+	\item Ist der Kiosk-Modus aktiv, funktioniert die automatische Anmeldung und der Hephaistos Start direkt 
+	\item Durch Touch-Eingaben oder dem Anschließen einer Maus, kann der Kioskmodus nicht verlassen werden 
+	\item Durch Neustart der Stele kann der Kioskmodus ebenfalls nicht verlassen werden, da Windows- Login und Hauptprogramm automatisch starten 
+	\item Durch anschließen einer Tastatur, kann der Modus mithilfe von STRG+ALT+ENTF verlassen werden 
+\end{itemize}
+
+\paragraph{Anforderungen}
+	\begin{itemize}
+		\item Genutzte Technologie für den Kiosk-Modus muss typische Webtechnologien unterstützen ("volle Browser-Kompatibilität) –> HTML, CSS und JS müssen dargestellt werden können
+		\item Service Worker werden vom Kiosk-Modus nicht behindert, also funktioniert der Offline Mode des Hauptprogramms
+			\begin{itemize}
+				\item zB. Bei Internetverbindung werden alle wichtigen Ressourcen auf Proxy gespeichert und für offline Nutzung aufbewahrt
+			\end{itemize}
+			
+
+	\end{itemize}
+
+\paragraph{\underline{Browser}}
+	\begin{itemize}
+		\item Windows EDGE:
+		\begin{itemize}
+			\item Bisher genutzt. Browsen funktioniert uneingeschränkt
+			\item Nachteil: Lageplan Bug
+		\end{itemize}
+		\item Firefox:
+		\begin{itemize}
+			\item Browsen funktioniert uneingeschränkt
+			\item Vorteil: Lageplan Bug gefixt
+		\end{itemize}
+		\item Electron
+		\begin{itemize}
+			\item[*]	Framework für Desktop Anwendungen welche mithilfe von HTML, CSS und Script geschrieben werden können. Funktioniert als eine Art minimaler Webbrowser mit Filesystem (zb. Slack, Visual Studio Code, Wordpress wurden damit erstellt).
+			\item Wurde Anfangs im Softwareprojekt getestet
+			\item Es gab Probleme mit Autostart, Auto-Login und dem öffnen der Electron App
+		\end{itemize}
+	\end{itemize}
+\paragraph{\underline{Mein Fazit}}
+	\begin{itemize}
+		\item nur auf Kioskmodus beschränken
+		\item Browser - bzw. Powerpoint links direkt in die App einpflanzen
+		\item Windows bietet mittlerweile die Möglichkeit Kiosksysteme, mit mehreren Apps anzuzeigen (Browser und Powerpoint gibt es im Windows Store)
+	\end{itemize}
+
+\subsubsection{Dynamische Daten von Max Vierling}
+Bereits vorhandene Dynamische Inhalte:
+\begin{itemize}
+	\item Stundenplan $\rightarrow$ gibt Fehlermeldung zurück
+	\item News und Veranstaltungen $\rightarrow$ keine Ausgabe
+	\item Meldungen zum BIM
+\end{itemize}
+Bei all diesen ist es auch notwendig das diese dynamisch Aufgerufen werden. Eventuell wäre es eine gute Möglichkeit einige der Informationen über BIM und die HTWK dynamisch zu erzeugen um Fehlinformationen zu vermeiden, allerdings ist dies nicht zwingend für alles nötig, aber beispielsweise die Zahlen und Fakten  könnten so stets korrekt gehalten werden. Bei allgemeinen Informationen, sowie zur Geschichte von Fakultät und Hochschule, sollte dies nicht notwendig sein.   \newline\newline
+Alternativen zum HTML-Parsen:
+\begin{itemize}
+	\item direkter Aufruf der News und Veranstaltungen von der HTWK Datenbank
+	\item keine offizielle API von typo3, die wir für uns nutzen könnten, allerdings könne Extensions selbstgeschrieben werden
+\end{itemize}
+Webseiten lokal Cachen:
+\begin{itemize}
+	\item Windowsbefehle:
+	\begin{itemize}
+		\item cd Zielverzeichnis\newline
+		wget -p -m -k -K -E http://www.url.de -a ./mylogfile -e robots=off
+		\item erstellt Mirror der lokal im Browser läuft
+		\item allerdings muss der Befehlssatz erst installiert werden
+	\end{itemize}
+	\item einige Browser besitzen eine Speicherfunktion (Chrome, Firefox)
+	\item Tools wie WinHTTrack
+\end{itemize}
+Diese gespeicherten Daten könnte man beim Ausfall der Internetverbindung abrufen. Allerdings könnte eine Automatisierung über WinHTTrack kompliziert oder nicht umsetzbar sein.
+
+\subsubsection{Zuarbeit von Martin Diecke}
+
+\paragraph{Automatisches Bildschirm-Dimmen}
+
+Das automatische Bildschirm dimmen ist in den Windows-Energie-Optionen einstellbar. Wobei man hier eine Zeit angeben muss, nach welcher der Bildschirm in den Standby-Modus wechselt. Das direkte ,,dimmen`` des Bildschirmes, also das bloße Senken der Helligkeit, ist Windows intern nicht möglich und erfordert andere Software.
+
+\paragraph{Einfache Wiederherstellung / Installation auf neuen Stelen}
+
+Die Einrichtung des Systems wurde von unseren Vorgängern via .bat-Dateien gemacht. Diese Methode ist zwar nicht schlecht, aber eignet sich nicht für eine schnelle und einfache Installation auf neuen Stelen. Dafür würde sich am besten ein Backup der originalen Stele eignen, welches man als Image auf die neue Stele installiert. Damit würden alle Dateien, Einstellungen und sämtliche Software übernommen werden. Somit müsste man nur die Inhalte ändern. Und um ein Backup zu erstellen ist diese Methode auch geeignet, da es ja ein 1:1-Abbild der original Stele ist.
+
+Ein Tool dafür wäre, zum Beispiel, CloneZilla Live. Mit CloneZilla Live kann man ein 1:1-Abbild der Festplatte erstellen. Zudem ist CloneZilla an kein System gebunden, da man dieses Tool via USB-Stick nutzt, was die Einrichtung neuer Stelen vereinfacht. Zudem werden Netzzugriffe unterstützt, weshalb man auf Speichermedien via NFS-, SSH-Server zugreifen kann. Somit wäre eine headless Installation möglich.
+
+\paragraph{In Windows eingebaute Möglichkeiten für barrierefrei Nutzung}
+
+Windows selbst hat eine paar nützliche Tools für eine barrierefreie Nutzung.
+
+\begin{itemize}
+\item Bildschirmlupe
+\item Text to Speech
+\item Kontrastanpassung
+\end{itemize}
+
+Die Bildschirmlupe kann durch Drücken der Tastenkombination 'Windowstaste' + '+' erzielt werden. Durch den selbigen Befehl kann man die Lupe auch noch größer stellen. Durch das Drücken der Tasten 'Windowstaste' + '-' wird die Zoomstärke wieder verringert.
+Via 'Windowstaste' + 'Esc' kann die Bildschirmlupe verlassen werden.
+Alle diese Tastenkombinationen könnte man als Knöpfe im Frontend realisieren.
+
+Um mit der Text to Speech Software zu arbeiten, muss man vorher in den Windowseinstellungen einen Shortcut für diese festlegen. Da die Software etwas komplexer ist, ist nicht alles davon für uns zu gebrauchen. Das wohl Wichtigste, für unser Projekt, ist das Vorlesen des Textes auf dem ganzen Bildschirm, da Leute mit Sehschwäche nicht spezifizieren können, was genau sie vorgelesen haben möchten. Um zu erreichen, dass der Inhalt einer Seite vorgelesen wird, muss man eine festgelegte Tastenkombination drücken. Welche man via Knopf im Frontend implementieren könnte.
+
+Zudem kann man auch in einen kontrastreicheren Modus schalten, welcher das erkennen, von Inhalten vereinfachen soll. Durch das Drücken der Tasten 'Alt' + 'Shift-Links' + 'Druck' kann der Modus gestartet werden, nach einem kurzen Moment aktualisiert sich der Bildschirm. Da auch hier eine Tastenkombination vorliegt, wäre die Realisierung im Frontend möglich.
+
+\subsubsection {Zuarbeit von Nimrod Mugzach}
+    \begin{itemize}
+    \item Node.js was ist es eigentlich ?
+    \begin{itemize}
+    \item Node.js ist eine JavaScript-Laufzeitumgebung, die auf Chromes V8 JavaScript-Engine basiert
+          und dient als Open-Source Server-Side Plattform zum Betrieb von Netzwerkanwendungen mit JavaScript zu erstellen.
+          Insbesondere lassen sich Webserver damit realisieren.
+    \end{itemize}
+    \item Wie genau wird das genutzt?
+    \begin{itemize}
+    \item Node.js wird genutzt um serverseitig JavaScript-Code auszuführen und damit kann man auch Zugriff auf die Dateisystem und 
+          ähnliches bekommen. 
+          In unsere Fall Node.js wird genutzt um Proxy aufzubauen und den Server zu erstellen.
+    \end{itemize}
+    \item Vor-/Nachteile von Node.js:
+    \begin{itemize}
+        \item Vorteile:
+        \begin{itemize}
+            \item Schnelle Ausführung von Webanwendungen
+            \begin{itemize}
+                \item V8 engine
+                \item Non-blocking Eingabe/Ausgabe und asynchronous request handling
+                \item Event-based model (Alles in einer Technologie(Frontend-Backend)
+            \end{itemize}
+            \item Skalierbarkeit gegeben
+            \item Robuste Technologie stack
+            \item Funktioniert sehr gut mit JSON
+            \item Reiche Ökosystem
+        \end{itemize}
+        \item Nachteile:
+        \begin{itemize}
+        \item Nicht optimal für Applikationen die viel CPU brauchen
+        \item Risiko von „Callback hell“ wo Callback sitzen in ein andere Callback und machen den Code schwer zu verstehen.
+        \end{itemize}
+    \end{itemize}
+     \item Was gibt es für Alternativen? Lohnt sich ein Umstieg?
+     \begin{itemize}
+     \item Als Alternative für Node.js gibt es andere Programmiersprachen wie z.B.:
+            Ruby, PHP, GO und Python.
+            Für unser Projekt wird Node.js auf jeden Fall reichen, da wir nicht so viele CPU-lästige Aufgaben haben. 
+            Daher kann man davon ausgehen, dass ein Umstieg sich nicht lohnt.
+     \end{itemize}
+     \item Was für Techniken/Libraries gibt es, um Konfigurationen zu laden?
+     \begin{itemize}
+     \item Library heißt Express die die Möglichkeit schnell Servers und APIs zu erstellen.
+     \item Request ist eine Library die kann sehr gut http Client erstellen und einfach Inhalt von der Web zuzugreifen.
+     \end{itemize}
+     \item Proxy:
+     \begin{itemize}
+        \item Was ist es eigentlich?
+            \begin{itemize}
+            \item Ein Proxy Server ist ein Vermittler in einem Netzwerk, der Anfragen entgegennimmt und sie stellvertretend weiterleitet. 
+            Mit Hilfe des Proxy Servers lässt sich die Kommunikation zwischen einem lokalen Client und einem Webserver absichern, 
+            verschleiern oder beschleunigen.
+            \end{itemize}
+        \item Ist ein Proxy wirklich notwendig?
+            \begin{itemize}
+            \item Ein Proxy-Server ist wichtig, weil er Anonymität und Privatsphäre wahrt. 
+                  Um Datenschütz zu sichern ist es notwendig ein Proxy-Server zu nutzen. 
+            \end{itemize}
+     \end{itemize}
+    \end{itemize}
+
+\subsubsection{Zuarbeit von Hanna Markava}
+Backend: Node.js
+\begin{itemize}
+\item{\underline{\textit{Was ist Node.js:}}} 
+
+Node.js ist eine asynchrone, Event-basierte JavaScript-Laufzeitumgebung für die Entwicklung von Webanwendungen und Anwendungsservern, entwickelt von Ryan Dahl. 
+Node.js basiert auf der JavaScript-Engine V8 von Chrome und ist ,,eine Plattform``, die JavaScript außerhalb des Browsers laufen lässt.
+
+\item{\underline{\textit{Wie funktioniert Node.js(das Konzept namens ' Eventschleife ' ):}}}
+
+JavaScript ist eine Event-gesteuerte Sprache, d.\,h.\ dass das Zusammenspiel von Komponenten durch Events gesteuert wird, solche wie z.\,B.\ Benutzereingaben (\textit{onclick}) (im Allgemeinen: kein linearer Durchlauf des Quellcodes). Außerdem ist JavaScript Single-Threaded: Ein JavaScript Programm kann sich zu einem Zeitpunkt nur genau um eine einzige Sache kümmern. Auf der einer Seite wird Arbeitsspeicher gespart, auf der anderen Seite ist das ziemlich belastend, wenn man an tausende gleichzeitige Anfragen denkt.
+Node.js und seine Bibliotheken (neben V8-Engine-Basis) ermöglichen eine parallele Ausführung. Mithilfe der Event-Loop werden zeitintensive Lese- und Schreiboperationen  an das Betriebssystem oder andere Applikationen ausgelagert.Sobald eine Anfrage an eine externe Ressource im Quellcode gestellt wird, wird sie an Event-Loop weitergegeben.Da wird ein Callback registriert, der die Anfrage an das Betriebssystem weiterleitet. Node.js hat dann wieder die Kontrolle und kann mit der Ausführung der Applikationen fortfahren. Sobald die Anfrage beendet wird, wird das Ergebnis an Event-Loop zurück übermittelt. Event-Loop sorgt dafür, dass alle zugehörigen Callbacks-Funktionen ausgeführt werden. Danach werden die Daten zurück an Anwender geschickt.
+
+\item{\underline{\textit{Wo wird Node.js eingesetzt :}}}
+
+Allgemein: von einfachen Kommandozeilenwerkzeugen bis hin zum Applikationsserver für Webapplikationen.(Backend Applications, Chats, Spiele, Blogs, Social Applications, Tools u.\,s.\,w.)
+
+\item{\underline{\textit{Benutzte Bibliotheken, Technologien:}}}
+\begin{itemize}
+	\item libev: realisiert Event-Loop
+	\item libeio: sorgt dafür, dass die Schreib- und Leseoperationen asynchron stattfinden können;außerdem bietet Interagieren mit dem Dateisystem( nicht nur Auslesen, sondern auch Erstellen und Entfernen).
+	\item libuv: (seit der Version 0.6 von Node.js) $\rightarrow$ die Möglichkeit, Node.js auf verschiedenen Betriebssystemen laufen zu lassen.
+	\item dns-Modul: Übergabe der Anfragen an die C-Ares-Bibliothek zur Namensauflösung (Domainnamen $\rightarrow$ IP-Adressen)
+	\item crypto-Modul: die Verschlüsselung von Daten  (digitale Signaturen)
+	\item zlib-Komponente und zlib-Modul: Datenkompressio (keine Implementation von Node.js, sondern Weiterleitung).zlab-Modul stellt einen Wrapper zu zlab und sorgt für die korrekten Eingabe/Ausgabeoperatoren.
+	\item eine Einbindung zu HTTP-Parser (da Node.js auch mit den HTTP-Protokollen umgehen soll)
+\end{itemize}
+
+
+
+\item{\underline{\textit{NPM:}}}
+Node.js Package Manager (wird für die Installation von node Programmen und Modulen benutzt)
+
+\item{\underline{\textit{Populäre Module:}}}
+\begin{itemize}
+	\item Express (Webframework für Node.js, es ermöglicht das Entwickeln moderner Webanwendungen)
+	\item Socket.io (Austausch zwischen dem Client und Ihrem Node-Server)
+	\item Mongo/Mongoose und Redis (dokumentenorientierte Datenspeicher)
+	\item CoffeeScript (Programmiersprache, deren Programme in JavaScript transkompiliert werden)
+	und andere
+\end{itemize}
+
+
+\item{\underline{\textit{Die Vorteile von Node.js:}}}
+\begin{itemize}
+	\item die Möglichkeit, sehr schnell Ergebnisse zu erzielen
+	\item die Flexibilität über sich ändernde Anforderungen 
+	\item die Entwicklung einer Community um den Kern der Plattform (Node.js war als Open-Source-Projekt konzipiert $\rightarrow$ es ist eine aktive Community
+	entstanden, die sich mit Weiterentwicklung, Stabilisierung der Plattform und dem Einsatz von Node.js in der Praxis beschäftigt.
+	\item Kein Erlernen von neuen Java-Script-Dialekt-Kenntnissen: Node.js ist keine Programmiersprache, nur die Laufzeitumgebung 
+	\item die Weiterentwicklung der V8-Engine (die Unterstützung der neusten Sprachfeatures) (gleiche Geschwindigkeit wie bei der Bearbeitung von C-Code)
+	\item der Fokus auf Performance $\rightarrow$ Nonblocking I/O bzw.\ Asynchronität (die Möglichkeit auf weitere Anfragen zu reagieren, weniger Arbeitsspeicher, schnellere Bearbeitung)
+	\item Architektur (das Konzept namens ,,Eventschleife``) $\rightarrow$ Event-Loop
+	\item ideal für I/O-Intensive Apps (zahlreiche Netzwerk-Zugriffe)
+	\item Node.js $\rightarrow$ eine von Betriebssystemen unabhängige Plattform (mithilfe von libuv)
+	\item die Einbindung externer Bibliotheken (Node.js baut auf einem modularen Ansatz auf)
+	\item JavaScript als die  populärste Skriptsprache
+	\item Modulaufbau der Node.js (Austauschbarkeit zwischen Komponenten und Wiederverwendbarkeit von Teilkomponenten)
+\end{itemize}
+\item{\underline{\textit{Die Nachteile von Node.js:}}}
+\begin{itemize}
+	\item Node.js ist Single-Threaded (es werden nicht alle CPUs in einem Rechner für die Ausführung genutzt). Bedingung: Gute Koordination zwischen ,,Threads``. Das Problem: Gute Kommunikation zwischen CPUs über erledigte Aufgaben erfordert ein komplexes Modell mit mehr Aufwand für die Programmierer und das System.
+	\item nicht für CPU-intensive Programme gedacht (z.B. Video Encoding), wegen mehrerer Berechnungen, die auf CPU zugreifen und weniger auf Netzwerk oder Dateisystem.
+
+\end{itemize}
+\item{\underline{\textit{Alternative:PHP}}}
+\begin{itemize}
+	\item PHP Vorteile:
+	\begin{itemize}
+		\item leichtere Konfiguration
+		\item erfordert weniger Code
+		\item die Unterstützung von Internet hosting services
+		\item mehr Frameworks und CMS
+		\item die Unterstützung von mehreren Datenbankensystemen (MySQL, Oracle, …)
+	\end{itemize}
+	\item Node.js Vorteile:
+	\begin{itemize}
+		\item ist eine Laufzeitumgebung
+		\item Multithreading
+		\item Modulaufbau – die Module werden beim ersten Mal heruntergeladen, danach sind immer benutzbar
+		\item meist identische Syntax zu JavaScript
+		\item schneller als PHP
+	\end{itemize}
+\end{itemize}
+
+\item{\underline{\textit{Alternative: Django (Python web framework)}}}
+\begin{itemize}
+	\item Django Vorteile:
+	\begin{itemize}
+		\item die Unterstützung von mehreren Datenbankensystemen (MySQL, Oracle, …)
+		\item leicht zu lernen
+		\item groß skalierbar
+		\item User Community 
+		\item \textit{Nachteile}: Django ist monolithisch (d.\,h.\ dass UI und Datenzugriff in ein Programm in einer Plattform zusammengesetzt sind), nicht gut für weniger skalierbare Apps. Außerdem ist ein Verständnis von Frameworks eine Vorbedingung, Django ist komplexer.
+	\end{itemize}
+	\item Node.js Vorteile:
+	\begin{itemize}
+		\item die Bibliotheken
+		\item Fokus auf Performance (Event-gesteuert)
+		\item Bauen von APIs (Programmteil, die ,,Anbindung`` an das System für die anderen Programme)
+		\item NPM
+		\item User Community
+		\item \textit{Nachteile}: asynchrone Programmierung erfordert Zeit und Aufmerksamkeit, nicht geeignet für CPU-intensive Apps, verschachtelte Callbacks.
+		
+	\end{itemize}
+\end{itemize}
+
+\item{\underline{\textit{Weitere Alternativen:}}}
+Elixir, PERL, ASP.NET , CEYLON, REBOL…
+	
+\item{\underline{\textit{Was ist Proxy:}}}
+
+Der Proxy Server ist ein Vermittler oder Stellvertreter und nimmt Anfragen entgegen, die er unter seiner eigenen Identität weiterleitet. Die Funktion des Proxy Servers kann als zusätzliche Software auf einem Rechner oder auf einem dedizierten Server installiert sein. Mithilfe des Proxy Servers lässt sich die Kommunikation zwischen einem lokalen Client und einem Webserver absichern, verschleiern oder beschleunigen. Proxy Server können viele verschiedene Protokolle gleichzeitig bedienen oder auf ein einziges spezialisiert sein. Häufig kommen HTTP-Proxys zum Einsatz, die die Kommunikation zwischen Anwendern und Internetservices kontrollieren. Ist ein Cache auf dem Proxy vorhanden, kann er bestimmte wiederkehrende Anfragen selbst beantworten und damit den Abruf von Seiten beschleunigen.
+
+\item{\underline{\textit{Wie funktioniert Proxy:}}}
+
+Proxy Server erfüllen viele Aufgaben. Sie sind dank ihrer Stellvertreterrolle in der Lage, Daten und Verbindungen zu kontrollieren, zu filtern und zwischenzuspeichern. Interne Netze, Geräte oder Services lassen sich so vor externen Bedrohungen aus dem Internet schützen. Durch Caching ist es möglich, regelmäßig wiederkehrende Anfragen zu beantworten. Bandbreite lässt sich einsparen und Antwortzeiten verkürzen sich. Als Schnittstelle zwischen zwei Kommunikationspartnern kann der Proxy Datenverkehr filtern, unerwünschte Inhalte blockieren oder auffällige Anfragen zurückweisen.
+
+\item{\underline{\textit{Warum wird Proxy genutzt:}}}
+\begin{itemize}
+	\item aus Sicherheitsgründen
+	\item es wird Webserverüberlastung vermieden
+	\item Proxy kontrolliert den Datenverkehr, kann Bandbreite beschränken
+	\item kann auch den Zugriff ablehnen
+	\item Caching ist Zwischenspeicherung von oft genutzten Daten, um überflüssige Webserveranfragen zu vermeiden
+\end{itemize}
+
+\item{\underline{\textit{Proxy und Node.js:}}}
+
+Mit Hilfe von Node.js kann man eine Proxy-Anwendung erzeugen.
+
+
+\end{itemize}
+\subsubsection{Zuarbeit von Judith Gwen Schulz - Frontend}
+\paragraph {Bisher wird React benutzt. Was ist React eigentlich?}
+\begin{itemize}
+	\item OpenSource View Rendering Library von Facebook
+	\item Verwendung von JavaScript
+	\item Stellt ein Grundgerüst für die Ausgabe von User-Interface-Komponenten auf Webseiten zur Verfügung 
+	\item Komponenten werden hierarchisch aufgebaut und können in der Syntax also vom Entwickler definierten HTML-Tags repräsentiert werden
+\end{itemize}
+\paragraph{Wie genau wird React bisher genutzt?}
+\begin{itemize}
+	\item Es wird als SPA zum rendering im Browser genutzt
+	\item Bestehenden React code findet man unter client webpage/src
+\end{itemize}
+\paragraph{ Vorteile und Nachteile von React}
+\begin{itemize}
+	\item Vorteile
+\begin{itemize}
+		\item Leichtgewichtig
+		\item Sehr schnelle Browserausführung
+		\item Durch die breite Anwendungsschicht von Entwicklern, findet man sehr viel Beispiele im Netz bzw. viel Literatur
+		\item durch Komponentenarchitektur - Skalierbare und flexibel 
+		\item JSX-Syntax-Erweiterung - verbindet HTML und CSS in einem JavaScript-Code 
+		\item Arbeit mit virtuellem DOM - Aufwand einer Veränderung am tatsächlichen DOM  wird extrem gering gehalten
+		\item Einfacher zu erlernen, da es sich um eine Bibliothek handelt und daher weniger Vorgaben hat
+	\end{itemize}
+\end{itemize}
+\begin{itemize}
+	\item Nachteile
+\begin{itemize}
+	\item Keine freie Entwicklercommunity - Facebook entscheidet
+	\item Deckt nur den View-Teil eines Frontend-Frameworks ab
+	\item Bei einem Update, kann es sein, dass die implementierten Libraries nicht mehr funktionieren 
+	\item Man muss JSX erlernen um mit React zu arbeiten 
+\end{itemize}
+\end{itemize}
+
+\paragraph{Was gibt es für Alternativen? Lohnt sich gegebenenfalls ein Umstieg?} 
+\paragraph{Angular} 
+\begin{itemize}
+	\item TypeScript-basiertes Front-End-Webapplikationsframework
+	\item Entwicklung durch eine Community aus Einzelpersonen und Unternehmen  angeführt durch Google) 
+\end{itemize}
+\paragraph{React vs Angular} 
+\begin{table}[!ht] 
+	\begin{tabularx}{\textwidth}{|C|C|}
+		\multicolumn{1}{C}{\textbf{React}} & \multicolumn{1}{C}{\textbf{Angular}} \\ 
+		\hline 
+		- konzentriert sich darauf, Komponenten zu bilden und diese effizient anzuzeigen - lässt dabei Routing, Validierung, Kommunikation mit dem Backend außer Acht & - Vollständiges Framework - bietet Lösungen für fas alle Aufgaben eines Frontend-Entwicklers  \\
+		\hline
+		- Entwickler kann sich eine Sammlung verschiedener Libraries anlegen - kann also in der Summe als Framework genauso vollständig wie Angular sein \linebreak am Anfang muss man sich die passenden Libraries suchen 
+		\linebreak Gefahr besteht, dass eine dieser Libraries nach einem Update von React nicht mehr funktioniert & - Mit Angular erhält man ein „Rundum-Sorglos Paket \linebreak - Angular Team kümmert sich bei Updates um mögliche Probleme \linebreak - Eintausch von Freiheit in Sicherheit \\
+		\hline 
+		Eignet sich besser: \linebreak - bei großen Datenmengen\linebreak - Bei vielen Interaktionsmöglichkeiten\linebreak
+		- wenn viele Dialogelemente viele andere Elemente beeinflussen können \linebreak - wenn es auf Performance ankommt \linebreak & - Eignet sich besser, um die typische Formularanwendung für Büroumgebung zu implementieren \\
+		\hline 
+		-JavaScript Basis\linebreak - Möglichkeit TypeScript zuverwenden & - TypScript Basis \\
+		\hline
+	\end{tabularx}
+\end{table}
+
+\paragraph{Vue.js} 
+\begin{itemize}
+	\item clientseitiges JavaScript-Webapplikationsframework  
+	\item gibt die Struktur der Anwendungen nicht vor - erlaubt so, Strukturierung nach eigenen Ansprüchen 
+	\item Möglichkeit, auf Basis von JavaScript, komponentenorientiert zu entwickeln
+	\item Konzentriert sich nur auf die Darstellung einer Applikation - daher ein leichtgewichtiges und flexibles Werkzeug
+	\item ähnliche Ansätze wie React
+	\item man muss zusätzliche Pakete in die Applikation integrieren (Vue CLI, VueX zur Verwaltung des Applikationszustands, Vue.js-Router)
+\end{itemize}
+\paragraph{React vs Vue.js} 
+\begin{itemize}
+	\item Viele Gemeinsamkeiten wie:
+	\begin{itemize}
+		\item Verwenden Tools zur Erstellung neuer Projekte (Vue: vue-cli, React: Create React App)
+		\item Nutzen beide Properties 
+		\item Sellen Chrome Devtools zur Verfügung 
+		\item Funktionalitäten, wie Routing oder State Management, werden in separate Frameworks ausgelagert
+	\end{itemize}
+\end{itemize}
+\begin{table}[!ht] 
+	\begin{tabularx}{\textwidth}{|C|C|}
+		\multicolumn{1}{C}{\textbf{React}} & \multicolumn{1}{C}{\textbf{Vue.js}} \\ 
+		\hline 
+		- Implementiert virtuellen DOM \linebreak - Bei Änderung des Applikation State, werden alle Komponente und deren Unterkomponenten neu gerendert & - Implementiert virtuellen DOM, man kann allerdings auch direkt den DOM beeinflussen \linebreak - Überwacht Änderungen von Komponenten und deren Unterkomponenten und muss nicht immer neu rendern \\
+		\hline
+		- Verwendet JSX-Syntax & - Verwendet Single File Components (Kombination aus HTML, JavaScript, CSS) \\
+		\hline 
+	\end{tabularx}
+\end{table}
+
+\paragraph{Fazit}
+\begin{itemize}
+	\item der Umstieg von React zu Angular würde sich nicht lohnen da Angular schwergewichtiger ist
+	\item Da sich React und Vue.js sehr ähnlich sind, ist es fraglich ob sich der Aufwand des Umsteigens lohnen würde
+\end{itemize}
+
+\subsubsection{Zuarbeit zur Technologierecherche von Leon Malte Meng}
+
+Wir gehen davon aus das wir einen fertigen 2D Plan von der Fakultät Bauwesen erhalten.
+Was die Darstellung eigener Karten/Lagepläne angeht, ist das Angebot eigentlich nicht existent.
+Ein Angebot wäre zum Beispiel Image Map, was jedoch entfällt, da die fortlaufende Nutzung kostenpflichtig ist.
+
+Der digitale Lageplan kann jedoch da wir eine feste Auflösung haben einfach mithilfe von JS, HTML und CSS selbst realisiert werden.
+Wenn die Nutzer auf die Sektion Lageplan gelangen, wird zuerst der Plan des Stockwerkes geladen, auf dem sich die Stele befindet. Dazu werden Buttons zum durchschalten der Pläne für die jeweiligen Stockwerke sowie ein Suchfeld
+für bestimmte Räume angezeigt.
+
+Die Darstellung des Standortes der Stele und des gesuchten Raumes wird mithilfe eines den Lageplan überlagernden Bildes (z.\,B.\ ein roter Punkt oder einer Nadel wie bei Google Maps) erreicht. Dazu müssen die Positionen der Räume auf der Website ermittelt werden und in das/die Script/s programmiert werden. Der Standort der Stele kann über eine Config Datei im lokalen Ordner verändert werden. Dem Kunden könnte eine Liste mit zulässigen eingaben gegeben werden, um zu verhindern, dass er einen nicht zulässigen Raum als Standort der Stele angibt.
+
+Nachteile wären das diese Implementierung abhängig von der Auflösung wäre und bei Stelen mit anderer Auflösung nicht mehr richtig funktionieren würde oder das, wenn die Implementation einer Wegangabe gewünscht ist die Knoten für unsere Wege im abstrakten Pixel(x,y) Format programmiert werden müssten. Es wäre außerdem relativ aufwendig.
+
+Von Vorteil wäre jedoch das diese Lösung Offline laufen würde, was bei dem regelmäßigen Ausfallen des WLAN nützlich wäre. Da sich die Raumnummern und der Lageplan wahrscheinlich in der näheren Zukunft nicht ändern werden sollte der Lageplan nicht so schnell dysfunktional werden.
+
+
+\subsection{Entscheidungen des Technologieworkshops}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Überblick über Architektur}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Definierte Schnittstellen}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Liste der Architekturentscheidungen}
+{\small Autor: xxx}
+
+XXX (bewusste und unbewusste Entscheidungen mit zeitlicher Einordnung)
+
+
+
+\section{Prozess- und Implementationsvorgaben}
+
+\subsection{Definition of Done}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Coding Style}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Zu nutzende Werkzeuge}
+{\small Autor: xxx}
+
+XXX
+
+
+%%%%%%%%%%%%
+%% Abschnitt mit den Sprints beginnt hier
+%%%%%%%%%%%%
+
+\section{Sprint 1}
+
+\input{sprint1}
+
+\section{Sprint 2}
+
+%% \input{sprint2}
+
+%%%%%% weitere Sprints analog
+
+
+\section{Dokumentation}
+
+\subsection{Handbuch}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Installationsanleitung}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Software-Lizenz}
+{\small Autor: xxx}
+
+XXX
+
+
+\section{Projektabschluss}
+
+\subsection{Protokoll der Abnahme und Inbetriebnahme beim Kunden}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Präsentation auf der Messe}
+{\small Autor: xxx}
+
+Poster, Bericht
+
+\subsection{Abschließende Einschätzung durch Product-Owner}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Abschließende Einschätzung durch Software-Architekt}
+{\small Autor: xxx}
+
+XXX
+
+\subsection{Abschließende Einschätzung durch Team-Manager}
+{\small Autor: xxx}
+
+XXX
+
+\end{document}
